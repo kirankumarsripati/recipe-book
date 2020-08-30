@@ -5,19 +5,27 @@
         <div class="col-5">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              #nameInput>
           </div>
         </div>
         <div class="col-2">
           <div class="form-group">
             <label for="amount">Amount</label>
-            <input type="text" class="form-control" id="amount">
+            <input
+              type="text"
+              class="form-control"
+              id="amount"
+              #amountInput>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <button class="btn btn-success" type="submit">Add</button>
+          <button class="btn btn-success" type="button" (click)="onAddItem()">Add</button>
           <button class="ml-2 btn btn-danger" type="button">Delete</button>
           <button class="ml-2 btn btn-primary" type="button">Delete</button>
         </div>
