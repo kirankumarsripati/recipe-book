@@ -11,12 +11,12 @@ export class RecipeListComponent implements OnInit {
     {
       name: 'Vada Pav',
       description: 'Maharashtra Special',
-      imagePath: 'https://media.istockphoto.com/photos/vada-pav-with-a-glass-of-tea-very-famous-street-food-of-india-in-the-picture-id1248186164',
+      imagePath: '//media.istockphoto.com/photos/vada-pav-with-a-glass-of-tea-very-famous-street-food-of-india-in-the-picture-id1248186164',
     },
     {
       name: 'Misal Pav',
       description: 'Mamledar Special',
-      imagePath: 'https://hebbarskitchen.com/wp-content/uploads/mainPhotos/misal-pav-recipe-how-to-make-maharashtrian-misal-pav-recipe-1-1068x1423.jpeg',
+      imagePath: '//hebbarskitchen.com/wp-content/uploads/mainPhotos/misal-pav-recipe-how-to-make-maharashtrian-misal-pav-recipe-1-1068x1423.jpeg',
     }
   ];
 
