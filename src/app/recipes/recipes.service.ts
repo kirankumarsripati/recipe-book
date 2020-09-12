@@ -44,6 +44,10 @@ export class RecipeService {
     private slService: ShoppingListService,
   ) { }
 
+  getRecipe(index: number): Recipe {
+    return this.recipes[index];
+  }
+
   getRecipes(): Recipe[] {
     return this.recipes.slice();
   }

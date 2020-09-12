@@ -1,7 +1,8 @@
 <a
   style="cursor: pointer;"
-  class="list-group-item list-group-item-action"
-  (click)="onSelected()">
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item list-group-item-action">
   <div class="row">
     <div class="col">
       <div class="d-flex justify-content-between">
