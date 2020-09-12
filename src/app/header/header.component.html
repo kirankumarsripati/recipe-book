@@ -2,12 +2,12 @@
   <a href="#" class="navbar-brand">Recipe Book</a>
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" routerLink="/recipes">Recipes</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/shopping-list">Shopping List</a></li>
+      <li class="nav-item"><a routerLinkActive="active" class="nav-link" routerLink="/recipes">Recipes</a></li>
+      <li class="nav-item"><a routerLinkActive="active" class="nav-link" routerLink="/shopping-list">Shopping List</a></li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown" [appDropdown]="dropdown">
-        <a href="#" id="navbarDropdown" class="nav-item nav-link dropdown-toggle" role="dropdown">Manage</a>
+        <a id="navbarDropdown" class="nav-item nav-link dropdown-toggle" role="dropdown">Manage</a>
         <div class="dropdown-menu dropdown-menu-right" #dropdown aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Save Data</a>
           <a class="dropdown-item" href="#">Fetch Data</a>
