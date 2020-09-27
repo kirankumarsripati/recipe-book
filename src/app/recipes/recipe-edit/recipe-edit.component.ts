@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 import { RecipeService } from '../recipes.service';
 
@@ -40,8 +40,8 @@ export class RecipeEditComponent implements OnInit {
 
   onAddIngredient(): void {
     this.ingredients.push(this.fb.group({
-      name: '',
-      amount: '',
+      name: [null, Validators.required],
+      amount: [null, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)]],
     }));
   }
 
@@ -59,17 +59,17 @@ export class RecipeEditComponent implements OnInit {
       if (recipe.ingredients) {
         for (const ingredient of recipe.ingredients) {
           recipeIngredients.push(this.fb.group({
-            name: ingredient.name,
-            amount: ingredient.amount,
+            name: [ingredient.name, Validators.required],
+            amount: [ingredient.amount, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)]],
           }));
         }
       }
     }
 
     this.recipeForm = this.fb.group({
-      name: recipeName,
-      imagePath: recipeImagePath,
-      description: recipeDescription,
+      name: [recipeName, Validators.required],
+      imagePath: [recipeImagePath, Validators.required],
+      description: [recipeDescription, Validators.required],
       ingredients: recipeIngredients,
     });
   }
