@@ -38,6 +38,13 @@ export class RecipeEditComponent implements OnInit {
     return this.recipeForm.get('ingredients') as FormArray;
   }
 
+  onAddIngredient(): void {
+    this.ingredients.push(this.fb.group({
+      name: '',
+      amount: '',
+    }));
+  }
+
   private initForm(): void {
     let recipeName = '';
     let recipeImagePath = '';
