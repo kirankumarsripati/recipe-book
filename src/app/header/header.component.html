@@ -9,7 +9,7 @@
       <li class="nav-item dropdown" [appDropdown]="dropdown">
         <a id="navbarDropdown" class="nav-item nav-link dropdown-toggle" role="dropdown">Manage</a>
         <div class="dropdown-menu dropdown-menu-right" #dropdown aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Save Data</a>
+          <a class="dropdown-item" (click)="onSaveData()">Save Data</a>
           <a class="dropdown-item" href="#">Fetch Data</a>
         </div>
       </li>
