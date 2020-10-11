@@ -6,7 +6,11 @@ const appRoutes: Routes = [
   // { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule' }
   {
     path: 'recipes',
-    loadChildren: () => import ('./recipes/recipes.module').then(m => m.RecipesModule)
+    loadChildren: () => import ('./recipes/recipes.module').then(m => m.RecipesModule),
+  },
+  {
+    path: 'shopping-list',
+    loadChildren: () => import('./shopping-list/shopping-list.module').then(m => m.ShoppingListModule),
   }
 ];
 
